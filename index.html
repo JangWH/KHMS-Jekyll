@@ -2,6 +2,74 @@
 layout: default
 ---
 
-<div class="container-fluid">
-<img src="{{site.baseurl}}/img/header-img.jpg" alt="">
+<div class="">
+<img src="{{site.baseurl}}/img/header-img.jpg" class="img-fluid" alt="Responsive image">
 </div>
+
+<main class="page-content" aria-label="Content">
+  <div class="container">
+    <div class="home">
+          <div class="row">
+            <div class="col-md-5">
+              <h4>공지사항 <span class="badge badge-secondary">{{ post.content | size }}</span><br></h4>
+                <ul class="post-list">
+                  {% for notice in site.categories.notice %}
+                  <li><a href="{{site.baseurl}}{{notice.url}}">{{notice.title}}</a></li>
+                  {% endfor %}
+                </ul>
+                <hr>
+                <h4>News <span class="badge badge-secondary">New</span><br></h4>
+                <ul class="post-list">
+                  {% for news in site.categories.news %}
+                  <li><a href={{site.baseurl}}{{news.url}}"">{{news.title}} | {{ "now" | date: "%Y-%m-%d" }}</a></li>
+                  {% endfor %}
+                </ul>
+
+            </div>
+            <div class="col-md-7">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+              <img src="{{site.baseurl}}/img/designhouse.png" alt="..." class="img-thumbnail" width="200" height="200">
+            </div>
+    </div>
+    <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+  </div>
+</main>

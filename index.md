@@ -3,5 +3,5 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+permalink: /index/
 ---
-여기는 테스트용입니다.
