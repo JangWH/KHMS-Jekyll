@@ -9,9 +9,7 @@
   <ul class="nav justify-content-end">
     {% for page in site.pages %}
     {% if page.title %}
-      <li class="nav-item">
-        <a class="nav-link active" href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a>
-      </li>
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a>
     {% endif %}
     {% endfor %}
   </ul>
