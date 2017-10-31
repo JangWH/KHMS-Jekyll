@@ -1,5 +1,5 @@
 <span><img src="{{site.baseurl}}/img/2017/10/tag-256.png" alt="Tags: " class="tag-img" width="15px" height="15px"></span>
-<div class="post-tags">
+<span class="post-tags">
   {% if post %}
     {% assign tags = post.tags %}
   {% else %}
@@ -8,5 +8,5 @@
   {% for tag in tags %}
   <a href="/tags/#{{tag|slugize}}">{{tag}}</a>{% unless forloop.last %},{% endunless %}
   {% endfor %}
-</div>
+</span>
 <br/>
