@@ -22,7 +22,8 @@ layout: default
           <hr>
           <ul class="post-list">
             {% for news in site.categories.news %}
-            <a href="{{site.baseurl}}{{news.url}}">{{news.title}} | <span>{{ post.date | date: "%Y-%m-%d" }}</span></a><br>
+            <a href="{{site.baseurl}}{{news.url}}">{{news.title}}{{ page.date | date: "%Y-%m-%d" }}{% if page.author %}
+            {{ page.author }}{% endif %}</a><br>
             {% endfor %}
           </ul>
         </div>
