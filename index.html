@@ -17,7 +17,7 @@ layout: default
           </ul>
         </div>
         <div class="col-md-6">
-          <h4><a href="{{site.baseurl}}/news.html">News </a><span class="badge badge-secondary">{{ site.categories.news | size }}</span><br></h4>
+          <h4><a href="{{site.baseurl}}/news.html">뉴스 </a><span class="badge badge-secondary">{{ site.categories.news | size }}</span><br></h4>
           <hr>
           <ul class="post-list">
             {% for news in site.categories.news limit:5 %}
