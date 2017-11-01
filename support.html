@@ -5,15 +5,11 @@ order: 4
 title: 고객지원
 ---
 
-<main class="page-content" aria-label="Content">
-  <div class="container">
-      <h2>고객지원</h2>
-      <hr>
-      <h4>공지사항</h4>
-      {% for notice in site.categories.notice %}
-      <ul>
-        <li><a href="{{site.baseurl}}{{notice.url}}">{{notice.title}}</a></li>
-      </ul>
-      {% endfor %}
-  </div>
-</main>
+<h2>고객지원</h2>
+<hr>
+<h4>공지사항</h4>
+{% for notice in site.categories.notice %}
+<ul>
+  <li><a href="{{site.baseurl}}{{notice.url}}">{{notice.title}}</a></li>
+</ul>
+{% endfor %}

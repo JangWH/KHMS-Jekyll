@@ -21,8 +21,8 @@ layout: default
           <h4><a href="{{site.baseurl}}/news.html">News </a><span class="badge badge-secondary">{{ site.categories.news | size }}</span><br></h4>
           <hr>
           <ul class="post-list">
-            {% for news in site.categories.news %}
-            <a href="{{site.baseurl}}{{news.url}}"><p>{{news.title}}{{ page.date | date: "%Y-%m-%d" }}{% if page.author %}</p>
+            {% for news in site.categories.news limit:5 %}
+            <a href="{{site.baseurl}}{{news.url}}">{{news.title}}{{ page.date | date: "%Y-%m-%d" }}{% if page.author %}
             {{ page.author }}{% endif %}</a><br>
             {% endfor %}
           </ul>
@@ -56,9 +56,8 @@ layout: default
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="img/designhouse.png" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title">인기 태그</h4>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
