@@ -8,7 +8,7 @@
   </a>
   <ul class="nav justify-content-end">
     {% assign sorted_pages = site.pages | sort:"order" %}
-    {% for node in sorted_pages %}
+    {% for page in sorted_pages %}
       <li class="nav-item">
         <a class="nav-link active" href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
     {% endfor %}
