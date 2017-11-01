@@ -7,12 +7,10 @@
     <img src="{{site.baseurl}}/img/2017/10/KHMS-brand.jpg" height="35" alt="">
   </a>
   <ul class="nav justify-content-end">
-    {% for page in site.pages %}
-    {% if page.title %}
+    {% assign sorted_pages = site.pages | sort:"order" %}
+    {% for node in sorted_pages %}
       <li class="nav-item">
-        <a class="nav-link active" href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a>
-      </li>
-    {% endif %}
+        <a class="nav-link active" href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
     {% endfor %}
   </ul>
 </nav>
