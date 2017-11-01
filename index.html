@@ -21,8 +21,8 @@ layout: default
           <hr>
           <ul class="post-list">
             {% for news in site.categories.news limit:5 %}
-            <a href="{{site.baseurl}}{{news.url}}">{{news.title}}{% if page.author %}
-            {{ page.author }}{% endif %}</a><br>
+            <a href="{{site.baseurl}}{{news.url}}">{{news.title}}{{ post.date | date_to_string }}{% if post.author %}
+            {{ post.author }}{% endif %}</a><br>
             {% endfor %}
           </ul>
         </div>
@@ -58,7 +58,7 @@ layout: default
     <div class="card-body">
       <h4 class="card-title">인기 태그</h4>
       <hr>
-      <span class="badge badge-dark">정치</span>
+      <span class="badge badge-pill badge-primary">정치</span>
     </div>
   </div>
 </div>
