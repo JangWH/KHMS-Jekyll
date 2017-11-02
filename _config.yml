@@ -30,6 +30,24 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# And in your _config.yml you have to define your layout used to generate tag pages like:
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+# You can optionally define a per tag Atom/RSS feed. In your _config.yml define the following:
+tag_feed_layout: tag_feed
+tag_feed_dir: tag
+
+# Extra data on tag pages
+tag_page_data:
+  sitemap: false
+
+# Pretty page links
+tag_permalink_style: pretty
+
+# Ignoring tags
+ignored_tags: [tags,to,ignore]
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
